@@ -9,8 +9,8 @@ set -e
 # === CONFIGURATION ===
 PUBKEY="3bfNk9C3iT8VFT1hjg1w8hwASXXaL1HcyKsQCR8t7H8Xnp25My2s1oYhs6XwtKk9D8Ku2fvbnAC7yx7Xfse65a1atCQJmMG62S1tkJkgzJuJpKXQUA8ELX5ifCevEcv7iHGb"
 PROXY_NAME="golden-proxy"
-PROXY_LABEL="proxy"
 PROXY_PORT=9999
+REGION="eu"
 WORKDIR="/opt/golden-proxy"
 BIN_URL="https://github.com/GoldenMinerNetwork/golden-miner-nockchain-gpu-miner/releases/download/v0.1.4/golden-miner-pool-proxy"
 LOG_FILE="$WORKDIR/proxy.log"
@@ -81,7 +81,7 @@ After=network.target
 [Service]
 User=root
 WorkingDirectory=$WORKDIR
-ExecStart=$WORKDIR/golden-miner-pool-proxy --pubkey=$PUBKEY --name=$PROXY_NAME --label=$PROXY_LABEL --port=$PROXY_PORT
+ExecStart=$WORKDIR/golden-miner-pool-proxy --pubkey=$PUBKEY --name=$PROXY_NAME --port=$PROXY_PORT --region=$REGION
 Restart=always
 RestartSec=5
 LimitNOFILE=20000
