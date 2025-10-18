@@ -12,7 +12,7 @@ PROXY_NAME="golden-proxy"
 PROXY_LABEL="proxy"
 PROXY_PORT=9999
 WORKDIR="/opt/golden-proxy"
-BIN_URL="https://github.com/GoldenMinerNetwork/golden-miner-nockchain-gpu-miner/releases/download/v0.1.3/golden-miner-pool-proxy"
+BIN_URL="https://github.com/GoldenMinerNetwork/golden-miner-nockchain-gpu-miner/releases/download/v0.1.4/golden-miner-pool-proxy"
 LOG_FILE="$WORKDIR/proxy.log"
 ERR_FILE="$WORKDIR/proxy.err"
 
